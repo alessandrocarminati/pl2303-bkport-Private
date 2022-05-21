@@ -45,9 +45,11 @@ pl2303 1-8.4:1.0: unknown device type, please report to linux-usb@vger.kernel.or
 The deviceid **067b:23a3** is not supported by this kernel version.
 This repository is the backport for the new driver.
 
-# build
+# Build out of tree for kernel 5.13
 
 ```
 make -C /lib/modules/$(uname -r)/build M=$PWD modules 
 ```
 
+# Build intree openwrt 21.02.1 aka kernel 5.4
+cp 5.16-5.4.pl2303.patch <openwrt-root>/target/linux/generic/backport-5.4/840-5.16-5.4.pl2303.patch
